@@ -23,4 +23,20 @@ class HomeCubit extends Cubit<HomeStates> {
       );
     }
   }
+
+  Future<void> getMoviesByGenre(String genre) async {
+    emit(
+      HomeLoading(),
+    );
+    try {
+      final movies = await homeService.fetchMoviesByGenre(genre);
+      emit(
+        HomeSuccess(movies),
+      );
+    } catch (e) {
+      emit(
+        HomeError('Não foi possível carregar os filmes deste genero!'),
+      );
+    }
+  }
 }
