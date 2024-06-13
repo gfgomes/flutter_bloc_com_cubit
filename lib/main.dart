@@ -1,7 +1,6 @@
 import 'package:bilheteria_panucci/logic/cubit/theme_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:bilheteria_panucci/screens/home.dart';
-import 'package:bilheteria_panucci/themes/my_themes.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
@@ -52,5 +51,3 @@ class BilheteriaPanucci extends StatelessWidget {
     );
   }
 }
-
-class CounterCubit {}
